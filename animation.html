@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS Animation */
+    @keyframes myAnimation {
+      0% { background-color: red; left: 0px; top: 0px; }
+      50% { background-color: blue; left: 200px; top: 0px; }
+      100% { background-color: red; left: 0px; top: 0px; }
+    }
+    
+    /* Styling for the animated element */
+    #myElement {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      left: 0px;
+      top: 0px;
+      animation: myAnimation 3s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="myElement"></div>
+
+  <script>
+    // JavaScript to control the animation
+    var element = document.getElementById("myElement");
+    
+    // Example: Pause the animation when the element is clicked
+    element.addEventListener("click", function() {
+      if (element.style.animationPlayState === "paused") {
+        element.style.animationPlayState = "running";
+      } else {
+        element.style.animationPlayState = "paused";
+      }
+    });
+  </script>
+</body>
+</html>

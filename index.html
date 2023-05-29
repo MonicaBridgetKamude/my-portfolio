@@ -8,13 +8,36 @@
         <ul>
         <li><a href="about.html"><l>ABOUT US</l></ah></li>
         <li><a href="contacts.html"><l>CONTACTS</l></a></li>
+        <li><a href="projects.html"><l>PROJECTS</l></a>
       </ul>
     </nav>
+    
 
     <h2>MONICA BRIDGET KAMUDE</h2>
 </header>
 
 <body>
+    <title>Greeting based on Hour of the Day</title>
+  <script>
+    function getGreeting() {
+      var currentHour = new Date().getHours();
+      var greeting;
+
+      if (currentHour >= 0 && currentHour < 12) {
+        greeting = "Good morning!";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        greeting = "Good afternoon!";
+      } else {
+        greeting = "Good evening!";
+      }
+
+      document.getElementById("greeting").innerHTML = greeting;
+    }
+  </script>
+</head>
+<body onload="getGreeting()">
+  <h1 id="greeting"></h1>
+</body>
 <img src="images/77.jpg" alt="pictures.private" height="300px"><br>
 
 <h3>currently studying ICT</h3>
@@ -29,11 +52,49 @@ i would like to encourage upcoming programmers to develop there interest in codi
 <p>
     So far i have knowledge in C programming, java and abit jnowledge in javascript <br>
     Learning programming is the most interesting thing in my life
+    <form action="#">
+        <div class="fields">
+            <div class="field name">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="field email">
+                <input type="email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="field">
+            <input type="text" placeholder="Subject" required>
+        </div>
+        <div class="field textarea">
+            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+        </div>
+        <div class="button-area">
+            <button type="submit">Send message</button>
+        </div>
+    </form>
+    <h4>PROJECTS</h4>>
+    <p>
+      <div style="height: 300px;">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="images/image 1.jpg"alt='slide 1'>
+            </div>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="images/image 2.jpg"alt='slide 2'>
+                </div>
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="images/image 3.jpg"alt='slide 3'>
+                    </div>
+    </p>
+
 </body>
 <footer>
     <h3>OUR CONTACTS</h3>
     <h3>Phone: 0981096969</h3>
     <h3>Email: monicabridgetkamude@gmail.com</h3>
+    <div class="text">Message me</div>
+
 
 </footer>
 </html>
