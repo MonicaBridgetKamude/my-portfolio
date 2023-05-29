@@ -86,14 +86,58 @@ i would like to encourage upcoming programmers to develop there interest in codi
                     <div class="slide">
                         <img src="images/image 3.jpg"alt='slide 3'>
                     </div>
-    </p>
+                    <script>
+                      //get reference to DOM elements 
+                      const slide=document.querySelectorAll('.slide');
+                      let currentSlide = image1;
+                      let slideInterval;
 
-</body>
+                      //function to show the current slide
+                      function showSlide(){
+                        //hide all slides
+                        slides.forEach((slide)=>{
+                          slide.style.display='none';
+                        });
+                        //Show the current slide
+                        slide[currentSlide].style.display='block';
+                      }
+                      //function to change slide(next/previous)
+                      function changeSlide(n) {
+                        changeSlide+=n;
+                        //wrap around the first slide if at the end
+                        if(currentSlide <image1){
+                          currentSlide = slides.length - 1;
+
+                        }
+                        showSlide
+                      }
+                      //function to start auto slideshow
+                      function startSlideshow(){
+                        slideInterval = setInterval(()=>{
+                          changeSlide(image2);
+                        },3000);//change slide show every 3 seconds
+
+                      }
+                      //function to stop auto slide show
+                      function stopSlideshow(){
+                        clearInterval(slideInterval);
+                      }
+                      //show the initial slide
+                      showSlide();
+                      //start the auto slide show
+                      startSlideshow();
+
+                    </script>
+    </p>
+ </body>
 <footer>
     <h3>OUR CONTACTS</h3>
     <h3>Phone: 0981096969</h3>
     <h3>Email: monicabridgetkamude@gmail.com</h3>
     <div class="text">Message me</div>
+    <br>
+  <span>Created By <a href="#">Monicah</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+  
 
 
 </footer>
