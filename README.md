@@ -1,2 +1,1 @@
-# MonicaBridgetKamude
- my portfolio
+# my-portfolio
