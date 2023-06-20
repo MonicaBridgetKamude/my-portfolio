@@ -8,7 +8,9 @@
         <ul>
         <li><a href="about.html"><l>ABOUT US</l></ah></li>
         <li><a href="contacts.html"><l>CONTACTS</l></a></li>
-        <li><a href="projects.html"><l>PROJECTS</l></a>
+        <li><a href="project.html"><l>PROJECTS</l></a></li>
+         <li><a href="slideshow.js"></a></li>
+        <li><a href="nica.html"></a></li>
       </ul>
     </nav>
     
@@ -17,7 +19,7 @@
 </header>
 
 <body>
-    <title>Greeting based on Hour of the Day</title>
+   <title>Greeting based on Hour of the Day</title>
   <script>
     function getGreeting() {
       var currentHour = new Date().getHours();
@@ -50,7 +52,7 @@ this is  a good website for beginners and those willing to enhance there knowled
 i would like to encourage upcoming programmers to develop there interest in coding<br>
 </p>
 <p>
-    So far i have knowledge in C programming, java and abit jnowledge in javascript <br>
+    So far i have knowledge in C programming, java and abit Knowledge in javascript <br>
     Learning programming is the most interesting thing in my life
     <form action="#">
         <div class="fields">
@@ -71,64 +73,22 @@ i would like to encourage upcoming programmers to develop there interest in codi
             <button type="submit">Send message</button>
         </div>
     </form>
-    <h4>PROJECTS</h4>>
-    <p>
-      <div style="height: 300px;">
-        <div class="slideshow-container">
-            <div class="slide">
-                <img src="images/image 1.jpg"alt='slide 1'>
-            </div>
-            <div class="slideshow-container">
-                <div class="slide">
-                    <img src="images/image 2.jpg"alt='slide 2'>
-                </div>
-                <div class="slideshow-container">
-                    <div class="slide">
-                        <img src="images/image 3.jpg"alt='slide 3'>
-                    </div>
-                    <script>
-                      //get reference to DOM elements 
-                      const slide=document.querySelectorAll('.slide');
-                      let currentSlide = image1;
-                      let slideInterval;
-
-                      //function to show the current slide
-                      function showSlide(){
-                        //hide all slides
-                        slides.forEach((slide)=>{
-                          slide.style.display='none';
-                        });
-                        //Show the current slide
-                        slide[currentSlide].style.display='block';
-                      }
-                      //function to change slide(next/previous)
-                      function changeSlide(n) {
-                        changeSlide+=n;
-                        //wrap around the first slide if at the end
-                        if(currentSlide <image1){
-                          currentSlide = slides.length - 1;
-
-                        }
-                        showSlide
-                      }
-                      //function to start auto slideshow
-                      function startSlideshow(){
-                        slideInterval = setInterval(()=>{
-                          changeSlide(image2);
-                        },3000);//change slide show every 3 seconds
-
-                      }
-                      //function to stop auto slide show
-                      function stopSlideshow(){
-                        clearInterval(slideInterval);
-                      }
-                      //show the initial slide
-                      showSlide();
-                      //start the auto slide show
-                      startSlideshow();
-
-                    </script>
-    </p>
+    <h4>PROJECTS</h4>
+    
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="images/image 1.jpg" style="height: 300px;">
+      </div>
+    
+      <div class="mySlides">
+        <img src="images/image 2.jpg" style="height: 300px">
+      </div>
+    
+      <div class="mySlides">
+        <img src="images/image 3.jpg" style="height: 300px">
+      </div>
+    </div>
+<script src="script.js"></script>
  </body>
 <footer>
     <h3>OUR CONTACTS</h3>
